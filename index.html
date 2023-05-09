@@ -127,25 +127,26 @@
             }
     </script>
 </head>
-<body>
+<body>  
 
     <form>
-        <h3>OBJETO DATE()</h3>
-        Data Atual
-        <input type="text" id="txtdia" readonly />
-        /
-        <input type="text" id="txtmes" readonly />
-        /
-        <input type="text" id="txtano" readonly /><br/><br/>
+        <h3>CLASSE DATE()</h3>
+        <br>
        
-        Nome do Mês
-        <input type="text" id="txtmesext" readonly /><br/><br/>
-        Hora atual 
-        <input type="text" id="txthor" readonly/>
-        <input type="text" id="txtmin" readonly/>
-        <input type="text" id="txtseg" readonly/><br><br>
-        Dia da semana 
-        <input type="text" id="txtsema" readonly/> <br><br>
+        <input type="text" id="txtdia" readonly  placeholder="Dia"/>
+        <br>
+        <input type="text" id="txtmes" readonly placeholder="Mês" />
+        <br>
+        <input type="text" id="txtano" readonly placeholder="Ano" /><br/><br/>
+       
+        
+        <input  class = "fname "type="text" id="txtmesext" readonly placeholder="Mês por extenso" readonly /><br/><br/>
+         
+        <input type="text" id="txthor" readonly placeholder="Hora"/>
+        <input type="text" id="txtmin" readonly placeholder="Minuto"/>
+        <input type="text" id="txtseg" readonly placeholder="Segundos"/><br><br>
+        
+        <input type="text" id="txtsema" readonly placeholder="Dia  por extenso"/> <br><br>
         <input type="button" value="Exibir" onClick="Exibir()"/>
         <input type="button" value="Parar Rélogio" onClick="Parar(rep)"/>
 
