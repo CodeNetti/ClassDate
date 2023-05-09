@@ -1,0 +1,10 @@
+body{
+    background-color: aquamarine;
+    font-size: 140%;
+    text-align: center;
+}
+
+#txtdia, #txtmes, #txtano, #txthr
+{
+    width:40px
+}

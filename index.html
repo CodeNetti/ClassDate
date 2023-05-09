@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Array</title>
+    <script language="JavaScript">
+        var rep;
+        var mes_ext = new Array
+                (
+                "Janeiro",
+                "Fevereiro",
+                "Março",
+                "Abril",
+                "Maio",
+                "Junho",
+                "Julho",
+                "Agosto",
+                "Setembro",
+                "Outubro",
+                "Novembro",
+                "Dezembro"
+                );
+               
+            /*
+            var mes_ext = new Array();
+            mes_ext[0] = "Janeiro";
+            mes_ext[1] = "Fevereiro";
+            mes_ext[2] = "Março";
+            mes_ext[3] = "Abril";
+            mes_ext[4] = "Maio";
+            mes_ext[5] = "Junho";
+            mes_ext[6] = "Julho";
+            mes_ext[7] = "Agosto";
+            mes_ext[8] = "Setembro";
+            mes_ext[9] = "Outubro";
+            mes_ext[10] = "Novembro";
+            mes_ext[11] = "Dezembro";
+            */
+           
+            var sema = new Array
+            (
+            "Domingo",
+            "Segunda-feira",
+            "Terça-feira",
+            "Quarta-feira",
+            "Quinta-feira",
+            "Sexta-feira",
+            "Sábado"
+            );
+           
+            /*
+            var sema = new Array();
+            sema[0]="Domingo";
+            sema[1]="Segunda-feira";
+            sema[2]="Terça-feira";
+            sema[3]="Quarta-feira";
+            sema[4]="Quinta-feira";
+            sema[5]="Sexta-feira";
+            sema[6]="Sábado";
+            */
+           
+            function Repetir()
+            {
+                var h = new Date();
+               
+                /* recebendo o dia do mês */
+                var dia = h.getDate();
+               
+                if (dia < 10)
+                    dia = "0" + dia;
+                   
+                /* recebendo o mês */
+                var mes = h.getMonth();
+               
+               
+               
+                mes = mes + 1;
+               
+                if (mes < 10)
+                    mes = "0" + mes;
+                       
+                /* recebendo o ano com 4 dígitos */
+                var ano = h.getFullYear();
+               
+                /* recebendo a hora do sistema */
+                var hora = h.getHours();
+                if (hora < 10)
+                    hora = "0" + hora;
+               
+                /* recebendo o minuto do sistema */
+                var minu = h.getMinutes();
+                if (minu < 10)
+                    minu = "0" + minu;
+               
+                /* recebendo o segundo do sistema */
+                var segu = h.getSeconds();
+                if (segu < 10)
+                    segu = "0" + segu;
+               
+                /* recebendo o dia da semana do sistema */
+                var sm = h.getDay();
+
+                document.getElementById("txtdia").value = dia;
+                document.getElementById("txtmes").value = mes;
+                document.getElementById("txtano").value = ano;
+                
+                document.getElementById("txtmesext").value = mes_ext[mes-1];
+               
+                document.getElementById("txthor").value = hora;
+                document.getElementById("txtmin").value = minu;
+                document.getElementById("txtseg").value = segu;
+               
+                document.getElementById("txtsema").value = sema[sm];       
+            }
+
+            function Exibir()
+            {
+                rep=setInterval("Repetir()",1000);
+            }
+
+            function Parar()
+            {
+                clearInterval(rep);
+            }
+    </script>
+</head>
+<body>
+
+    <form>
+        <h3>OBJETO DATE()</h3>
+        Data Atual
+        <input type="text" id="txtdia" readonly />
+        /
+        <input type="text" id="txtmes" readonly />
+        /
+        <input type="text" id="txtano" readonly /><br/><br/>
+       
+        Nome do Mês
+        <input type="text" id="txtmesext" readonly /><br/><br/>
+        Hora atual 
+        <input type="text" id="txthor" readonly/>
+        <input type="text" id="txtmin" readonly/>
+        <input type="text" id="txtseg" readonly/><br><br>
+        Dia da semana 
+        <input type="text" id="txtsema" readonly/> <br><br>
+        <input type="button" value="Exibir" onClick="Exibir()"/>
+        <input type="button" value="Parar Rélogio" onClick="Parar(rep)"/>
+
+    </form>
+    
+    
+
+    
+</body>
+</html>
